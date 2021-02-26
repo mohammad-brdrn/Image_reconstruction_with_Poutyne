@@ -14,7 +14,9 @@ Image reconstruction using Poutyne
     - Run in `Google Colab <https://colab.research.google.com/github/GRAAL-Research/poutyne/blob/master/examples/Image_reconstruction.ipynb>`_
 
 In this example, we train a simple convolutional autoencoder (Conv-AE) on the MNIST dataset to learn image reconstruction. The Conv-AE is composed of two parts: an encoder and a decoder. The encoder encodes the input images to extract compact image features. The decoder, on the other hand, decodes the extracted features, to reconstruct the input images.
+
 .. image:: img/AE.png
+
 Let's import all the needed packages.
 
 .. code-block:: python
