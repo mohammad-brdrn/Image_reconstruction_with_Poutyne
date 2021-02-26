@@ -137,7 +137,7 @@ In order to interact with the optimization process, `callbacks <https://poutyne.
 
 .. code-block:: python
 
-#callbacks
+    #callbacks
 
     save_path = 'saves'
     
