@@ -59,18 +59,18 @@ The MNIST dataset is directly downloaded from the `torchvision.datasets`. The tr
 
 .. code-block:: python
 
-full_train_dataset = datasets.MNIST('./datasets/', train=True, download=True, transform=tfms.ToTensor())
-test_dataset = datasets.MNIST('./datasets/', train=False, download=True, transform=tfms.ToTensor())
+    full_train_dataset = datasets.MNIST('./datasets/', train=True, download=True, transform=tfms.ToTensor())
+    test_dataset = datasets.MNIST('./datasets/', train=False, download=True, transform=tfms.ToTensor())
 
-# Selecting and seperating rate% of the full_train_dataset to create validation dataset
-full_dataset_length = len(full_train_dataset)
-indices = list(np.arange(full_dataset_length))
-np.random.shuffle(indices)
-train_indices = indices[math.floor(full_dataset_length * valid_split_percent):]
-valid_indices = indices[:math.floor(full_dataset_length * valid_split_percent)]
+    # Selecting and seperating rate% of the full_train_dataset to create validation dataset
+    full_dataset_length = len(full_train_dataset)
+    indices = list(np.arange(full_dataset_length))
+    np.random.shuffle(indices)
+    train_indices = indices[math.floor(full_dataset_length * valid_split_percent):]
+    valid_indices = indices[:math.floor(full_dataset_length * valid_split_percent)]
 
-train_dataset = Subset(full_train_dataset, train_indices)
-valid_dataset = Subset(full_train_dataset, valid_indices)
+    train_dataset = Subset(full_train_dataset, train_indices)
+    valid_dataset = Subset(full_train_dataset, valid_indices)
 
 The format of the downloaded MNIST dataset is proper for a classification application, which means each sample is composed of an image and the label (equal to the number that images show). However, for image reconstruction, the dataset should contain an input image and a target image, which simply are the same. Hence, using the code below, we define a new dataset that provides an image as an input and sets that image as its target, as well. In other words, we change the format of each dataset sample, from (image, label) to the (image, image).
 
