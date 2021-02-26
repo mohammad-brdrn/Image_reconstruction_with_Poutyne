@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Feb 26 10:29:58 2021
-
-@author: mmdba
-"""
 
 .. role:: hidden
     :class: hidden-section
