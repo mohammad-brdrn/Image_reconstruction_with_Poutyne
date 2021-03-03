@@ -6,7 +6,7 @@
 .. _intro:
 
 Image reconstruction using Poutyne
-***********************************
+**********************************
 
 .. note::
 
@@ -40,7 +40,7 @@ Let's import all the needed packages.
     from poutyne import set_seeds, Model, Experiment, ModelCheckpoint, CSVLogger
 
 Training constants
-==================================
+==================
 
 .. code-block:: python
 
@@ -55,7 +55,7 @@ Training constants
     set_seeds(42)
 
 Loading the MNIST dataset
-==================================
+=========================
 
 The MNIST dataset is directly downloaded from the `torchvision.datasets`. The training dataset contains 60,000 images of digits at the size of 28x28, however, we separate 20% of the full train dataset as a validation dataset. On the other hand, by setting the "train" argument to `False`, the test dataset, containing 10,000 images, is downloaded, and saved in the "datasets" directory.
 
@@ -106,7 +106,7 @@ Finally, in the section below, we create the right format of the dataset and the
     test_dataloader = DataLoader(test_dataset_new, batch_size=1, shuffle=False)
 
 Convolutional autoencoder
-==================================
+=========================
 
 .. code-block:: python
 
@@ -165,7 +165,7 @@ In order to interact with the optimization process, `callbacks <https://poutyne.
     optimizer = torch.optim.Adam(network.parameters(), lr=learning_rate)
 
 Training
-==================================
+========
 
 .. code-block:: python
 
@@ -176,7 +176,7 @@ Training
     model.fit_generator(train_dataloader, valid_dataloader, epochs=num_epochs, callbacks=callbacks, progress_options={'coloring': False})
 
 A random batch of the MNIST dataset images
-==================================
+==========================================
 
 Let's see some of the input samples, inside the training dataset.
 
@@ -192,7 +192,7 @@ Let's see some of the input samples, inside the training dataset.
 .. image:: img/mnist_batch.png
 
 Reconstructed images after 3 epochs of training
-==================================
+===============================================
 
 In order to visually evaluate the quality of the results, here, we show the reconstruction result of the samples shown above
 
@@ -209,7 +209,7 @@ In order to visually evaluate the quality of the results, here, we show the reco
 .. image:: img/mnist_3epoch.png
 
 Evaluation
-==================================
+==========
 
 One of the strong and useful tools in Poutyne is the evaluate class, which not only provides you with the evaluation metrics but also provides the ground truth and the prediction if the related arguments have been set to True (as below).
 
@@ -242,7 +242,7 @@ In most computer vision applications, such as image reconstruction, it is very i
 .. image:: img/rec_error_3epoch.png
 
 Resuming the training for more epochs
-==================================
+=====================================
 
 The code below shows how we can take advantage of Poutyne to resume training from a special epoch. For example, if we found the past epochs not enough, we can resume the training from the last done epoch, as below:
     
@@ -251,7 +251,7 @@ The code below shows how we can take advantage of Poutyne to resume training fro
     model.fit_generator(train_dataloader, valid_dataloader, epochs=13, callbacks=callbacks, initial_epoch=num_epochs)    
 
 Reconstructed images after the second training process
-==================================
+======================================================
 
 Now let's visualize the quality of results, after the second phase of training.
 
