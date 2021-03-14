@@ -297,6 +297,6 @@ Here, we compare the reconstruction accuracy of the network after 3 epochs and 1
     
     plt.show()
 
-.. image:: /_static/img/image_reconstruction/mnist_compare.png
+.. image:: /img/mnist_compare.png
 
 You can also try more finetuning, by changing the hyperparameters (network capacity, epochs, etc) to increase the accuracy as much as you want.
