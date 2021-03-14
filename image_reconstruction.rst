@@ -11,7 +11,7 @@ Image reconstruction using Poutyne
 
 In this example, we train a simple convolutional autoencoder (Conv-AE) on the MNIST dataset to learn image reconstruction. The Conv-AE is composed of two parts: an encoder and a decoder. The encoder encodes the input images to extract compact image features. The decoder, on the other hand, decodes the extracted features to reconstruct the input images.
 
-.. image:: /_static/img/image_reconstruction/AE.png
+.. image:: /img/AE.png
 
   Reference of the image. [Image 1`<https://blog.keras.io/building-autoencoders-in-keras.html>`_]
 
@@ -186,7 +186,7 @@ Let's see some of the input samples inside the training dataset.
     plt.imshow(inp)
     plt.show()
 
-.. image:: /_static/img/image_reconstruction/mnist_batch.png
+.. image:: /img/mnist_batch.png
 
 Reconstructed images after 3 epochs of training
 ===============================================
@@ -203,7 +203,7 @@ In order to visually evaluate the quality of the results, here, we show the reco
     plt.imshow(out)
     plt.show()
 
-.. image:: /_static/img/image_reconstruction/mnist_3epoch.png
+.. image:: /img/mnist_3epoch.png
 
 Evaluation
 ==========
@@ -236,7 +236,7 @@ In most computer vision applications, such as image reconstruction, it is very i
     ax3.set_title('reconstruction error')
     plt.show()
 
-.. image:: /_static/img/image_reconstruction/rec_error_3epoch.png
+.. image:: /img/rec_error_3epoch.png
 
 Resuming the training for more epochs
 =====================================
@@ -261,7 +261,7 @@ Now let's visualize the quality of the results after the second phase of trainin
     plt.imshow(out)
     plt.show()
 
-.. image:: /_static/img/image_reconstruction/mnist_13epoch.png
+.. image:: /img/mnist_13epoch.png
 
 .. code-block:: python
 
