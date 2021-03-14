@@ -13,7 +13,7 @@ In this example, we train a simple convolutional autoencoder (Conv-AE) on the MN
 
 .. image:: /img/AE.png
 
-Reference of the image.[`Image1 <https://creativecommons.org/licenses/by/2.0>`_]
+Reference of the image.[`Image1 <https://blog.keras.io/building-autoencoders-in-keras.html>`_]
 
 Let's import all the needed packages.
 
