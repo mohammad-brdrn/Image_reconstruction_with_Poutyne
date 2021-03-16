@@ -11,7 +11,7 @@ Image Reconstruction Using Poutyne
 
 In this example, we train a simple convolutional autoencoder (Conv-AE) on the MNIST dataset to learn image reconstruction. The Conv-AE is composed of two parts: an encoder and a decoder. The encoder encodes the input images to extract compact image features. The decoder, on the other hand, decodes the extracted features to reconstruct the input images.
 
-.. image:: /_static/img/image_reconstruction/AE.png
+.. image:: /img/AE.png
 
 `Source <https://blog.keras.io/building-autoencoders-in-keras.html>`_
 
@@ -179,7 +179,7 @@ Let's see some of the input samples inside the training dataset.
     plt.imshow(inp)
     plt.show()
 
-.. image:: /_static/img/image_reconstruction/mnist_batch.png
+.. image:: /img/mnist_batch.png
 
 Reconstructed Images after 3 Epochs of Training
 ===============================================
@@ -196,7 +196,7 @@ Here, we show the reconstruction results of the samples shown above to visually 
     plt.imshow(out)
     plt.show()
 
-.. image:: /_static/img/image_reconstruction/mnist_3epoch.png
+.. image:: /img/mnist_3epoch.png
 
 Evaluation
 ==========
@@ -229,7 +229,7 @@ In most computer vision applications, such as image reconstruction, it is impera
     ax3.set_title('reconstruction error')
     plt.show()
 
-.. image:: /_static/img/image_reconstruction/rec_error_3epoch.png
+.. image:: /img/rec_error_3epoch.png
 
 Resuming the training for more epochs
 =====================================
@@ -254,7 +254,7 @@ Now let's visualize the quality of the results after the second training.
     plt.imshow(out)
     plt.show()
 
-.. image:: /_static/img/image_reconstruction/mnist_13epoch.png
+.. image:: /img/mnist_13epoch.png
 
 .. code-block:: python
 
@@ -290,6 +290,6 @@ Here, we compare the reconstruction accuracy of the network after 3 epochs and 1
     
     plt.show()
 
-.. image:: /_static/img/image_reconstruction/mnist_compare.png
+.. image:: /img/mnist_compare.png
 
 You can also try finetuning the model to obtain better performance. Such as changing the hyperparameters (network capacity, epochs, etc.).
